@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div style="flex-direction: row; text-align: center; padding-top: 10px;" class="flex-container">
+		<div style="flex-direction: column;" class="flex-container">
+			<a href="{{url_for('ho1')}}" target="_blank">
+				<img length="300" width="300" src="{{ url_for('static', filename='css/11.png') }}">
+				<p><br/>LATERAL FILE 2DRW 5681<br/>Price: $1,149.00<br/><br/><br/></p></a>
+		</div>
+		<div style="flex-direction: column;" class="flex-container">
+			<a href="templates/ho_2.html" target="_blank">
+				<img length="300" width="300" src="{{ url_for('static', filename='css/12.png') }}">
+				<p><br/>FILE CABINET 2 DRAWER WHEELED URBAN GOLD<br/>Price: $399.00<br/>Sale Price: $349.00</p></a>
+		</div>
+		<div style="flex-direction: column;" class="flex-container">
+			<a href="templates/ho_3.html" target="_blank">
+				<img length="300" width="300" src="{{ url_for('static', filename='css/13.png') }}">
+				<p><br/>CREDENZA CABINET 70 DURHAM<br/>Price: $1,079.00<br/>Sale Price: $959.00<br/><br/></p></a>
+		</div>
+	</div>
+
+	<div style="flex-direction: row; text-align: center; padding-top: 10px;" class="flex-container">
+		<div style="flex-direction: column;" class="flex-container">
+			<a href="templates/ho_4.html" target="_blank">
+				<img length="300" width="300" src="{{ url_for('static', filename='css/14.png') }}">
+				<p><br/>66 CREDENZA CANFIELD<br/>Price: $1,499.00<br/>Sale Price: $1,349.00</p></a>
+		</div>
+		<div style="flex-direction: column;" class="flex-container">
+			<a href="templates/ho_5.html" target="_blank">
+				<img length="300" width="300" src="{{ url_for('static', filename='css/15.png') }}">
+				<p><br/>FILE 4 DRAWER HERITAGE<br/>Price: $789.00<br/>Sale Price: $699.00</p></a>
+		</div>
+		<div style="flex-direction: column;" class="flex-container">
+			<a href="templates/ho_6.html" target="_blank">
+				<img length="300" width="300" src="{{ url_for('static', filename='css/16.png') }}">
+				<p><br/>CREDENZA AMERICAN HERITAGE<br/>Price: $1,199.00<br/>Sale Price: $1,099.00</p></a>
+		</div>
+	</div>
+{% endblock content %}
