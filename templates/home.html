@@ -1,17 +1,58 @@
 {% extends "layout.html" %}
 {% block content %}
+    <style>
+        .mySlides {display:none}
+    </style>
 
-    <div class="croping">
-        <img width='100%' height='643' src="{{ url_for('static', filename='css/1.png') }}">
-        <img width='100%' height='643' src="{{ url_for('static', filename='css/2.png') }}">
-        <img width='100%' height='643' src="{{ url_for('static', filename='css/3.png') }}">
-        <img width='100%' height='643' src="{{ url_for('static', filename='css/4.png') }}">
-        <img width='100%' height='643' src="{{ url_for('static', filename='css/5.png') }}">
-        <img width='100%' height='643' src="{{ url_for('static', filename='css/6.png') }}">
-        <img width='100%' height='643' src="{{ url_for('static', filename='css/7.png') }}">
-        <img width='100%' height='643' src="{{ url_for('static', filename='css/8.png') }}">
-        <img width='100%' height='643' src="{{ url_for('static', filename='css/9.png') }}">
-        <img width='100%' height='643' src="{{ url_for('static', filename='css/10.png') }}">
-        </div>
+    <div>
+        <img class="mySlides" width="100%" length="643" src="{{ url_for('static', filename='css/1.png') }}">
+        <img class="mySlides" width="100%" length="643" src="{{ url_for('static', filename='css/2.png') }}">
+        <img class="mySlides" width="100%" length="643" src="{{ url_for('static', filename='css/3.png') }}">
+        <img class="mySlides" width="100%" length="643" src="{{ url_for('static', filename='css/4.png') }}">
+        <img class="mySlides" width="100%" length="643" src="{{ url_for('static', filename='css/5.png') }}">
+        <img class="mySlides" width="100%" length="643" src="{{ url_for('static', filename='css/6.png') }}">
+        <img class="mySlides" width="100%" length="643" src="{{ url_for('static', filename='css/7.png') }}">
+        <img class="mySlides" width="100%" length="643" src="{{ url_for('static', filename='css/8.png') }}">
+        <img class="mySlides" width="100%" length="643" src="{{ url_for('static', filename='css/9.png') }}">
+        <img class="mySlides" width="100%" length="643" src="{{ url_for('static', filename='css/10.png') }}">
 
+        <button class="w3-button w3-border w3-badge w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-border w3-badge w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+</div>
+<script>
+    var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 3140); // Change image every 3.14 seconds
+}
+</script>
+<script>
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  x[slideIndex-1].style.display = "block"; 
+}
+</script>
 {% endblock content %}

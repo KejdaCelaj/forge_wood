@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="content-section">
+     <div style="text-align: center;" class="content-section">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Join Today</legend>
+                <legend class="border-bottom mb-4"></legend>
                 <div class="form-group">
                     {{ form.username.label(class="form-control-label") }}
+                    <br/>
 
                     {% if form.username.errors %}
                         {{ form.username(class="form-control form-control-lg is-invalid") }}
@@ -20,7 +21,9 @@
                     {% endif %}
                 </div>
                 <div class="form-group">
+                    <br/>
                     {{ form.email.label(class="form-control-label") }}
+                    <br/>
                     {% if form.email.errors %}
                         {{ form.email(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -33,7 +36,9 @@
                     {% endif %}
                 </div>
                 <div class="form-group">
+                    <br/>
                     {{ form.password.label(class="form-control-label") }}
+                    <br/>
                     {% if form.password.errors %}
                         {{ form.password(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -46,7 +51,9 @@
                     {% endif %}
                 </div>
                 <div class="form-group">
+                    <br/>
                     {{ form.confirm_password.label(class="form-control-label") }}
+                    <br/>
                     {% if form.confirm_password.errors %}
                         {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -60,11 +67,12 @@
                 </div>
             </fieldset>
             <div class="form-group">
+
                 {{ form.submit(class="btn btn-outline-info") }}
             </div>
         </form>
     </div>
-    <div class="border-top pt-3">
+    <div style="text-align: center;" class="border-top pt-3">
         <small class="text-muted">
             Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
         </small>
