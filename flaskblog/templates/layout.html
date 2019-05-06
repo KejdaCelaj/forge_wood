@@ -12,33 +12,33 @@
               href="{{ url_for('static', filename='css/style.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div class="navbar">
+        <a href ="{{url_for('home')}}" target="_self">Home|</a>
 
-    <a href ="{{url_for('home')}}" target="_self">Home|</a>
+        <a href ="{{url_for('about')}}" target="_self">About Us|</a>
 
-    <a href ="{{url_for('about')}}" target="_self">About Us|</a>
-
-    <div class="dropdown">
-    <button class="dropbtn">Account|</button>
-      <div class="dropdown-content">
-            {% if current_user.is_authenticated %}
-              <a href="{{ url_for('account') }}">Account</a>
-              <a href="{{ url_for('logout') }}">Logout</a>
-            {% else %}
-              <a href="{{ url_for('login') }}">Login</a>
-              <a href="{{ url_for('register') }}">Register</a>
-            {% endif %}
-      </div>
-</div>
+        <a href ="{{url_for('join_email')}}" target="_self">Join Email|</a>
         
-    <a href ="{{url_for('join_email')}}" target="_self">Join Email|</a>
+        <div class="dropdown">
+          <button class="dropbtn">Account
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+                  {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('account') }}">Account</a>
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                  {% else %}
+                    <a href="{{ url_for('login') }}">Login</a>
+                    <a href="{{ url_for('register') }}">Register</a>
+                  {% endif %}
+            </div>
+          </div>
         
     <div class="k">
          <a style="padding-right: 5px;" href="tel:8607165141"><img src="https://img.icons8.com/small/16/000000/phone.png"></a>
          <a style="padding-right: 10px;" href="mailto:forgewood2019@gmail.com?Subject=Hello%20again" target="_top"><img src="https://img.icons8.com/small/16/000000/secured-letter.png"></a>
-         
-         <input type="text" placeholder="Search.." name="search">
-         <button type="submit"><i class="fa fa-search"></i></button>
 
+    </div>
     </div>
 
 </head>
